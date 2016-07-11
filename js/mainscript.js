@@ -2,7 +2,9 @@ $(document).ready(function(){
 //automatic slides  
 var slideIndex = 0;
 showSlides();
-
+bubbles();
+	
+	
 function showSlides() {
     var i;
     var slides = $('.my-slides').get();
@@ -67,8 +69,10 @@ function showSlides() {
       '-ms-filter' : 'blur(' + blurRand  + 'px)',
       'filter' : 'blur(' + blurRand  + 'px)',
     });
-			
-		})
+		$( this).children('.bubbles').css({
+			'width' : sizeRand + 'px',
+			'height' : sizeRand + 'px'
+		});
+		});
 	};
-	
 });

@@ -139,6 +139,36 @@ CALL TO ACTION
 	width: 100%;
 	height: 100%;
 }
+/**************
+BUBBLES
+*************/
+.bubble-container {
+  position: absolute;
+  bottom: 0;
+  will-change: transform;
+  -webkit-animation: bubblerise 4s infinite ease-in;
+  -moz-animation: bubblerise 4s infinite ease-in;
+  -ms-animation: bubblerise 4s infinite ease-in;
+  animation: bubblerise 4s infinite ease-in;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+.bubble {
+  width: 6px;
+  height: 6px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.25);
+  will-change: transform;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-animation: bubblewobble 0.4s infinite linear;
+  -moz-animation: bubblewobble 0.4s infinite linear;
+  -ms-animation: bubblewobble 0.4s infinite linear;
+  animation: bubblewobble 0.4s infinite linear;
+}
 
 @keyframes bubblerise {
   0% {
@@ -161,6 +191,40 @@ CALL TO ACTION
     opacity: 0;
   }
 }
+
+@-webkit-keyframes bubblewobble {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 2px;
+  }
+}
+@-moz-keyframes bubblewobble {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 2px;
+  }
+}
+@-ms-keyframes bubblewobble {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 2px;
+  }
+}
+@keyframes bubblewobble {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 2px;
+  }
+}
+
 
 #call-animate-btn{
 	text-align: center;
