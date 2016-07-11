@@ -1,25 +1,26 @@
-$(document).ready(function(){
-//automatic slides  
-var slideIndex = 0;
-showSlides();
-bubbles();
-	
-	
-function showSlides() {
-    var i;
-    var slides = $('.my-slides').get();
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1} 
-    slides[slideIndex-1].style.display = "block"; 
-    setTimeout(showSlides, 5000); // Change image every 3 seconds  
-}
-  /*get the container for the image
+$(document).ready(function () {
+	//automatic slides  
+	'use strict';
+	var slideIndex = 0;
+ /*get the container for the image
   */
 	var bubblesContainer = $('.call-img-container');
+	function showSlides() {
+		var i;
+		var slides = $('.my-slides').get();
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		slideIndex++;
+    	if (slideIndex> slides.length) {
+			slideIndex = 1;
+		}
+		slides[slideIndex-1].style.display = "block"; 
+		
+		setTimeout(showSlides, 5000); // Change image every 5 seconds  
+	}
 	
+	showSlides();
 	function bubbles(){
 		
 		var minBubbleCount = 25, maxBubbleCount = 70, minBubbleSize = 2, maxBubbleSize = 9;
@@ -75,4 +76,6 @@ function showSlides() {
 		});
 		});
 	};
-});
+
+	bubbles(); 	
+	});
