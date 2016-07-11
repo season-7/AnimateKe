@@ -128,20 +128,11 @@ CALL TO ACTION
 }
 
 .call-img-container{
-	display: block;
-	position: relative;
-	z-index: 1;
-}
-
-.call-img-container:after{
-	content:'';
-	position:absolute;
-	top:0;
-	left:0;
-	bottom:0;
-	right: 0;
-	z-index: 1;
-	background:url('../images/black-criss-cross.png') center repeat;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .call-img-container img{
@@ -149,8 +140,32 @@ CALL TO ACTION
 	height: 100%;
 }
 
+@keyframes bubblerise {
+  0% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+  5% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  99% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+}
+
 #call-animate-btn{
 	text-align: center;
+	bottom:0;
+	right: 0;
 }
 /**--------------------------------------
 FOOTER
