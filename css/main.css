@@ -43,20 +43,21 @@ HERO SECTION
 }
 
 .my-slides{
-	
+	display: block;
+	position: relative;
+	z-index: 1;
 }
 
-.my-slides img:after{
+
+.my-slides:after{
 	content:'';
 	position:absolute;
-	height: 100%;
-	width: 100%;
 	top:0;
 	left:0;
-	background:linear-gradient(to bottom #000 2px, transparent 2px), 
-		linear-gradient(to right, #000 2px transparent  2px);
-	background-size:10%;
-	padding: 1px;
+	bottom:0;
+	right: 0;
+	z-index: 1;
+	background:url('../images/black-criss-cross.png') center repeat;
 }
 /* Fading animation */
 .fade {
@@ -130,7 +131,6 @@ CALL TO ACTION
 	display: block;
 	position: relative;
 	z-index: 1;
-/*	background-image: url('../images/polar-bear-484515_1280.jpg') fixed no-repeat;*/
 }
 
 .call-img-container:after{
