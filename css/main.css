@@ -82,7 +82,21 @@ MIDDLE SECTION
 #middle-section{
 	
 }
+/*styles for the animated headling*/
+#middle-headline{
+	text-align: center;
+}
 
+.middle-icon{
+	text-align: center;
+}
+
+.middle-icon i{
+	font-size: 70px;
+} 
+.middle-text{
+	text-align: center;
+}
 /****************
 CALL TO ACTION
 **************/
