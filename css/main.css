@@ -85,9 +85,10 @@ HERO SECTION
 
 #hero-ctrls-container{
 	z-index: 1;
-	position: absolute;
+	position: absolute;	
 	left:0;
-	bottom:0;
+	top:50%;
+	width:100%;
 	right: 0;	
 }
 
@@ -128,28 +129,11 @@ MIDDLE SECTION
 	text-align: center;
 }
 
-/*add perspective to the words wrapper to work in a 3D space*/
-.middle-headline.rotate .words-wrapper{
-	display:inline-block;
-	perspective: 300px;
-}
-/*********
-opacity hides all the words and remove them from flow of doc
-**********/
-.middle-headline.rotate b{
-	opacity: 0;
-	position:absolute;
-	transform-origin: 50% 100%;
-	transform:rotateX(180deg);/*rotate the word 180 degrees*/
-	display:inline-block;
-	top:0;
-	left:0;
-}
-
 /*rotation is set back to 0 when the rotation is applied*/
 .cd-headline {
-  font-size: 3rem;
-  line-height: 1.2;
+	font-size: 1rem;
+	line-height: 1.2;
+	text-align: center;
 }
 @media only screen and (min-width: 768px) {
   .cd-headline {

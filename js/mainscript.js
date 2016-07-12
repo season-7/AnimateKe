@@ -36,6 +36,7 @@ $(document).ready(function () {
 	}
 	
 	showSlides();
+
 	function bubbles(){
 		
 		var minBubbleCount = 25, maxBubbleCount = 70, minBubbleSize = 2, maxBubbleSize = 9;
@@ -93,9 +94,6 @@ $(document).ready(function () {
 	};
 
 	bubbles(); 	
-	
-	initHeadline();
-	
 
 	function initHeadline() {
 		//insert <i> element for each letter of a changing word
@@ -103,7 +101,9 @@ $(document).ready(function () {
 		//initialise headline animation
 		animateHeadline($('.cd-headline'));
 	}
-
+	initHeadline();
+	
+	/*animating single letters*/
 	function singleLetters($words) {
 		$words.each(function(){
 			var word = $(this),
@@ -117,7 +117,8 @@ $(document).ready(function () {
 		    word.html(newLetters).css('opacity', 1);
 		});
 	}
-
+	
+	
 	function animateHeadline($headlines) {
 		var duration = animationDelay;
 		$headlines.each(function(){
