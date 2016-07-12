@@ -78,4 +78,37 @@ $(document).ready(function () {
 	};
 
 	bubbles(); 	
+	
+	/*animate headline*/
+	var animationDelay = 2500;
+	
+	function animateHeadline(headline){
+		headline.each(function(){
+			var head = $( this );
+			
+			//trigger animations
+			setTimeout(function(){
+				hideWord(head.find('.is-visible'))
+			}, animationDelay);
+		});
+	}
+	
+	function hideWord(word){
+		var nextWord = takeNext(word);
+		switchWord(word, nextWord);
+		setTimeout(function(){hideWord(nextWord)},animationDelay);
+	}
+	
+	function takeNext(word){
+		return (!word.is(':last-child')) ? word.next() : word.parent().children().eq(0);
+	}
+	
+	function switchWord(oldWord, newWord){
+		oldWord.removeClass('is-visible').addClass('is-hidden');
+		newWord.removeClass('is-hidden').addClass('is-visible');
+	}
+	
+	animateHeadline($('.middle-headline'));
+	
+	
 	});
