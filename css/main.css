@@ -414,7 +414,7 @@ BUBBLES
     opacity: 0;
   }
 }
-
+/*bubble wobbl*/
 @-webkit-keyframes bubblewobble {
   0% {
     margin-left: 0;
@@ -448,11 +448,14 @@ BUBBLES
   }
 }
 
-
+/*animate button*/
 #call-animate-btn{
+	position:absolute;
 	text-align: center;
 	bottom:0;
+	top:50%;
 	right: 0;
+	left: 0;
 }
 /**--------------------------------------
 FOOTER
