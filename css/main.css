@@ -33,7 +33,6 @@ HERO SECTION
 #slideshow-container{
   max-width: 100%;
   margin: auto;
-  margin-top:25px;
 	position:relative;
 }
 
@@ -47,7 +46,6 @@ HERO SECTION
 	position: relative;
 	height: 50%;
 }
-
 
 .my-slides:after{
 	content:'';
@@ -344,19 +342,25 @@ xrotate-1
 CALL TO ACTION
 **************/
 #call-to-action{	
+
 }
 
 .call-img-container{
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   margin: 0 auto;
+/*	background:url('../images/polar-bear-484515_1280.jpg');*/
 }
 
 .call-img-container img{
-	width: 100%;
-	height: 100%;
+  position: relative;
+  overflow: hidden;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 auto;
+	display: block;
 }
 /**************
 BUBBLES
@@ -373,7 +377,7 @@ BUBBLES
   opacity: 0;
 }
 
-.bubble {
+.bubbles {
   width: 6px;
   height: 6px;
   margin: 0 auto;
