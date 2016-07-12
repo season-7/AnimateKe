@@ -164,6 +164,17 @@ opacity hides all the words and remove them from flow of doc
 		transform:rotateX(180deg);
 		opacity: 0;
 	}
+	35%{
+		transform:rotateX(120deg);
+		opacity:0;
+	}
+	65%{
+		opacity:0;
+	}
+	100%{
+		transform:rotateX(360deg);
+		opacity: 1;
+	}
 }
 
 /****************
