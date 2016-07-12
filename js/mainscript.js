@@ -242,11 +242,11 @@ $(document).ready(function () {
 	var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 	
 	$('#call-animate-btn').on('click',function(){
-
+/*get the current element in the array and store in a variable*/
 		var currentAnim = animationsArr[Math.floor(Math.random()*animationsArr.length)];
-		
-		$(this).find('a').addClass(currentAnim).one(animationEnd,function(){
+		/*find the a tag and add the selected animation variable and track it the animation ends, when it does, remove the animation*/	$(this).find('a').addClass(currentAnim).one(animationEnd,function(){
 			$(this).removeClass(currentAnim);});
+		/*repeat process when the tag is clicked again*/
 	});/*end animate*/
 	
 	});
