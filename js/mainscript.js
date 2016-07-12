@@ -233,4 +233,11 @@ $(document).ready(function () {
 		$newWord.removeClass('is-hidden').addClass('is-visible');
 	}
 	
+	
+	/*animate button*/
+	var animationsArr = ['',];
+	$('#call-animate-btn').on('click',function(){
+		$(this).find('a').toggleClass('jello');
+	});/*end animate*/
+	
 	});
